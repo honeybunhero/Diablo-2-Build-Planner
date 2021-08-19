@@ -1,0 +1,36 @@
+8/15/2021
+	Started the Diablo 2 skill tree project. The main Activity has two GridLayouts. The first GridLayout has buttons for each of the seven classes, and the second GridLayout
+has a Fragment layout, and a LinearLayout side by side. The fragment layout will be used to display the skill trees for the character class that is currently selected, and the linear layout
+at the side contains each of the three skill tree buttons that will change which skill tree the user has active.
+I then moved on to designing the first fragment, which is the Sorceress class. I created a Linear Layout which has three Relative Layouts inside. Each Relative Layout is for each of the 
+three skill trees. My next step was to make sure the MainActivity can cycle between each Relative Layout depending on which of the skill tree buttons were clicked. This is where I had trouble
+for several hours.
+I tried using regular ID references, using Getters/Setters, creating public classes, inflaters, and nothing worked. I tried using interfaces, but I didn't use it properly and thought that
+wouldn't work. I stopped for the day.
+
+8/16/2021
+	I began with the same troubles as the day before, and spent a lot of time trying to research what possible solutions were. I decided to try using Context to see if I can pass the 
+information into the MainActivity, but due to not really understanding the uses behind Context, I didn't implement it correctly, nor do I have any idea if it would have worked anyway. After
+about an hour and a half I realized I didn't use interfaces correctly, so I tried it again and properly created three methods within an interface inside the Sorceress class. Each method 
+would only return the Relative Layout for each tree. So GetColdRelativeLayout, GetLightningRelativeLayout, and GetFireRelativeLayout. I implemented the interface skillTrees, which I need to
+rename to make it more obvious it is related to the Sorceress class, and implemented the three methods. Once I did this, I was able to make it so that each of the three buttons for the skill
+trees would properly change the fragment's RelativeLayout UI. After finally getting this to work, I cleaned up the code and made it a lot easier to read through. Separated all the code into
+different methods. The buttons that will change between each class are in their own methods, and everything to change the fragment for the Sorceress is in it's own method as well
+
+8/17/2021
+	I created the rest of the background images for each of the skill trees. 21 background images in total. I created the fragment for the amazon by copying everything inside the sorceress
+fragment and changing it to work with the amazon instead. Including skill tree name changes and background changes. I updated the interface to work with the amazon skill tree as well. I also
+added 7 new boolean statements into the MainActivity. Each one represents each of the 7 classes. When the user clicks on a class to work on, that respective boolean will become true, while
+the other 6 become false. I implemented everything for the amazon into the MainActivity and linked everything together as needed. When I clicked the amazon button, everything worked as intended
+except for the fragment changing. Same with the sorceress. I suspect the problem is that although everything has been linked, because the Top, Middle, and Bottom buttons are checking for
+both of the current fragments, even though I set boolean statements to check which class is the one currently being worked on, it doesn't know which to use. This is the case because I commented
+out everything related to the amazon, and the sorceress continued working the same way it did when I left off lastnight. I need to find a better way to link them all together. 
+Will work on that tomorrow.
+
+8/19/2021
+	I created the rest of the fragments and set up all the buttons needed to switch between fragments. Once this one done I used the sorceress and amazon as my tests. Once all the fragments
+were created the amazon fragment was very zoomed in, and the sorceress no longer opened. I did a lot of testing between everything, and once I erased all the created fragments, commented out
+their relative codes, and tested the sorceress alone, I realized that even though all the other fragments had their visibility set to gone, they still took up space. Amazon was first in the list
+so it was really compressed, where sorceress was last in the list, so it didn't even appear. I'm stuck and don't know how to proceed with fragments. My other approach is to make everything using
+only the MainActivity. This may make it easier later on to save/load each of the skill trees, but, unless I'm careful with how I create each method, having 7 character classes with 3 skill trees
+each, with all their own buttons within those trees will look really bad. 
