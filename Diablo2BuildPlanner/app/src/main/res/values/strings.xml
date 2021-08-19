@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Diablo2BuildPlanner</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="amazon">Amazon</string>
+    <string name="assassin">Assassin</string>
+    <string name="necromancer">Necromancer</string>
+    <string name="barbarian">Barbarian</string>
+    <string name="sorceress">Sorceress</string>
+    <string name="druid">Druid</string>
+    <string name="paladin">Paladin</string>
+    <string name="fire">Fire</string>
+    <string name="lightning">Lightning</string>
+    <string name="cold">Cold</string>
+</resources>

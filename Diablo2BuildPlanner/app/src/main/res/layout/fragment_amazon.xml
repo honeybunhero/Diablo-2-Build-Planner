@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".amazon">
+
+
+    <RelativeLayout
+        android:id="@+id/javalin_and_spear_skills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/amazon_javalin_and_spear_skills"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/passive_and_magic_skills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/amazon_passive_and_magic_skills"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bow_and_crossbow_skills"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/amazon_bow_and_crossbow_skills"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+</LinearLayout>

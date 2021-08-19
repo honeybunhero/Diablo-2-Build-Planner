@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".sorceress">
+
+
+    <RelativeLayout
+        android:id="@+id/Cold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sorceress_ice"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/Lightning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sorceress_thunder"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Fire"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sorceress_fire"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+</LinearLayout>
