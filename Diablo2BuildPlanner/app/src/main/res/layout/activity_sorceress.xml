@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Sorceress">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.diablo2buildplanner.classButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_class_buttons" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivSkillTree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/sorceress_ice" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSkillPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Points used: " />
+
+            <Button
+                android:id="@+id/Cold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/cold" />
+
+            <Button
+                android:id="@+id/Lightning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lightning" />
+
+            <Button
+                android:id="@+id/Fire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fire" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSkillDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".classButtons">
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridClasses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#00000000"
+        app:columnCount="3"
+        app:rowCount="1">
+
+        <Button
+            android:id="@+id/amazon"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnAmazonClick"
+
+            android:text="@string/amazon"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/assassin"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnAssassinClick"
+            android:text="@string/assassin"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/barbarian"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnBarbarianClick"
+            android:text="@string/barbarian"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/druid"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnDruidClick"
+            android:text="@string/druid"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/necromancer"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnNecromancerClick"
+            android:text="@string/necromancer"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/paladin"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnPaladinClick"
+            android:text="@string/paladin"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/hide"
+            android:layout_margin="5sp"
+            android:background="@color/white"
+            android:text="@string/sorceress"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/sorceress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="OnSorceressClick"
+            android:text="@string/sorceress"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+</LinearLayout>

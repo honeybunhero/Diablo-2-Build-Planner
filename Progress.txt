@@ -34,3 +34,11 @@ their relative codes, and tested the sorceress alone, I realized that even thoug
 so it was really compressed, where sorceress was last in the list, so it didn't even appear. I'm stuck and don't know how to proceed with fragments. My other approach is to make everything using
 only the MainActivity. This may make it easier later on to save/load each of the skill trees, but, unless I'm careful with how I create each method, having 7 character classes with 3 skill trees
 each, with all their own buttons within those trees will look really bad. 
+	I created a second branch in order to test this idea out and see how much progress I'm able to make. With it I was able to learn that the reason why the issue I was having where the
+component would take up space despite it's visibility set to GONE was due to me using a GridLayout component. What I'm doing now is in the MainActivity there is a fragment called ClassButtons.
+All it does it contain each of the seven classes just like in the previous version. When the user clicks on one of the classes it will open a new Activity for that class specifically. Using
+the sorceress as an example, within the Sorceress activity is the same ClassButtons fragment, a Horizontal LinearLayout, and a Vertical LinearLayout. Inside the horizontal linear layout is
+and ImageView and a Vertical LinearLayout containing three buttons. Those three buttons correspond to each of the three trees Cold, Lightning, and Fire. When one of those buttons are clicked
+the ImageView will change to the correct background image. The vertical linearLayout is setup with a TextView inside for the description of each skill. The next step is to create buttons
+on top of the imageview for each skill in the tree. I will add each button and then hide them once they are all made. This is because there will be a lot of overlap once every single button
+for every tree in the Sorceress class is added. Then I will create methods that will show/hide the correct buttons when the appropriate tree is selected. 

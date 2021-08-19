@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diablo2BuildPlanner">
         <activity
+            android:name=".Sorceress"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
