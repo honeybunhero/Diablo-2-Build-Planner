@@ -42,3 +42,9 @@ and ImageView and a Vertical LinearLayout containing three buttons. Those three 
 the ImageView will change to the correct background image. The vertical linearLayout is setup with a TextView inside for the description of each skill. The next step is to create buttons
 on top of the imageview for each skill in the tree. I will add each button and then hide them once they are all made. This is because there will be a lot of overlap once every single button
 for every tree in the Sorceress class is added. Then I will create methods that will show/hide the correct buttons when the appropriate tree is selected. 
+
+8/20/2021
+	All of the Sorceress' skill tree buttons have been created. So all of Cold, Lightning, and Fire skills have buttons and each button will react when clicked. All of the Cold skills have
+been fully implemented. So when the user clicks on any of the Cold skill buttons there will be a number that increases in increments of 1 up to 20 and a total cap of 110. So when 110 points
+are spent across all skill trees in total, no other points will be allowed. The next step is to allow the user to long click a skill in order to remove a point. Once that is done, the same
+steps are repeated across the other two skills, and then the rest of the characters.
