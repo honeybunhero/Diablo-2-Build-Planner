@@ -48,3 +48,8 @@ for every tree in the Sorceress class is added. Then I will create methods that 
 been fully implemented. So when the user clicks on any of the Cold skill buttons there will be a number that increases in increments of 1 up to 20 and a total cap of 110. So when 110 points
 are spent across all skill trees in total, no other points will be allowed. The next step is to allow the user to long click a skill in order to remove a point. Once that is done, the same
 steps are repeated across the other two skills, and then the rest of the characters.
+
+8/22/2021
+	The Sorceress Cold tree is now able to remove skill points added by longclicking. A description text will appear when the user adds or removes skill points in order to show what
+changes will happen with that skill. This will work with all Cold skills, but full implementation has only been completed with Ice Bolt. The rest of the Cold skills have all of Ice Bolt's
+text, so that will be changed to their appropriate values.
