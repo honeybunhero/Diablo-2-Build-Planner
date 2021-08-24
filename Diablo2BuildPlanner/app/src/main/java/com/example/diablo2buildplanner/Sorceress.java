@@ -325,7 +325,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 iceBlastPoints -= 1;
                 String text = "" + iceBlastPoints;
                 btnIceBlast.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Creates a magical sphere of ice that damages and freezes your enemy. \n\n" +
                         IceBlastValues(iceBlastPoints));
             }
             return true;
@@ -335,7 +335,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 frostNovaPoints -= 1;
                 String text = "" + iceBoltPoints;
                 btnFrostNova.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Creates an expanding ring of ice that damages and slows all nearby enemies. \n\n" +
                         FrostNovaValues(frostNovaPoints));
             }
             return true;
@@ -345,7 +345,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 frozenArmorPoints -= 1;
                 String text = "" + frozenArmorPoints;
                 btnFrozenArmor.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Increases your defense rating and freezes enemies that hit you. \n\n" +
                         FrozenArmorValues(frozenArmorPoints));
             }
             return true;
@@ -355,7 +355,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 shiverArmorPoints -= 1;
                 String text = "" + shiverArmorPoints;
                 btnShiverArmor.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Increases your defense rating. Freezes and damages enemies that hit you. \n\n" +
                         ShiverArmorValues(shiverArmorPoints));
             }
             return true;
@@ -365,7 +365,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 chillingArmorPoints -= 1;
                 String text = "" + chillingArmorPoints;
                 btnChillingArmor.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Increases defense and recharges an ice bolt in retaliation against ranged attackers. \n\n" +
                         ChillingArmorValues(chillingArmorPoints));
             }
             return true;
@@ -375,7 +375,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 glacialSpikePoints -= 1;
                 String text = "" + glacialSpikePoints;
                 btnGlacialSpike.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Creates a magical ice comet that freezes or kills nearby enemies \n\n" +
                         GlacialSpikeValues(glacialSpikePoints));
             }
             return true;
@@ -385,7 +385,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 blizzardPoints -= 1;
                 String text = "" + blizzardPoints;
                 btnBlizzard.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Summons massive shards of ice to destroy your enemies \n\n" +
                         BlizzardValues(blizzardPoints));
             }
             return true;
@@ -395,7 +395,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 frozenOrbPoints -= 1;
                 String text = "" + frozenOrbPoints;
                 btnFrozenOrb.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Creates a magical glove that sprays a torrent of ice bolts to lay waste to your enemies. \n\n" +
                         FrozenOrbValues(frozenOrbPoints));
             }
             return true;
@@ -405,7 +405,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 coldMasteryPoints -= 1;
                 String text = "" + coldMasteryPoints;
                 btnColdMastery.setText(text);
-                tvSkillDescription.setText("Shoots a bolt of ice that damages and slows your victim with a relatively low damage rate. \n\n" +
+                tvSkillDescription.setText("Passive: Increases the damage of your cold attacks by piercing enemies resistances to cold. \n\n" +
                         ColdMasteryValues(coldMasteryPoints));
             }
             return true;
@@ -799,6 +799,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
         }
         return text;
     }
+
     String IceBlastValues(int level) {
         String text = null;
         switch (level) {
@@ -806,228 +807,209 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 8-12 \n" +
+                        "Freezes for 3 seconds \n" +
+                        "Mana cost : 6 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 2:
-                text = "Cold Damage : 4-6 \n" +
-                        "Cold length : 7.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 15-19 \n" +
+                        "Freezes for 3.2 seconds \n" +
+                        "Mana cost : 6.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 3:
-                text = "Cold Damage : 5-8 \n" +
-                        "Cold length : 8.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 22-27 \n" +
+                        "Freezes for 3.4 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 4:
-                text = "Cold Damage : 6-9 \n" +
-                        "Cold length : 10.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 29-34 \n" +
+                        "Freezes for 3.6 seconds \n" +
+                        "Mana cost : 7.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 5:
-                text = "Cold Damage : 7-11 \n" +
-                        "Cold length : 11.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 36-42 \n" +
+                        "Freezes for 3.8 seconds \n" +
+                        "Mana cost : 8 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 6:
-                text = "Cold Damage : 8-12 \n" +
-                        "Cold length : 13 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 43-49 \n" +
+                        "Freezes for 4 seconds \n" +
+                        "Mana cost : 8.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 7:
-                text = "Cold Damage : 9-14 \n" +
-                        "Cold length : 14.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 50-57 \n" +
+                        "Freezes for 4.2 seconds \n" +
+                        "Mana cost : 9 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 8:
-                text = "Cold Damage : 10-15 \n" +
-                        "Cold length : 15.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 57-64 \n" +
+                        "Freezes for 4.4 seconds \n" +
+                        "Mana cost : 9.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 9:
-                text = "Cold Damage : 12-18 \n" +
-                        "Cold length : 17.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 71-79 \n" +
+                        "Freezes for 4.6 seconds \n" +
+                        "Mana cost : 10 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 10:
-                text = "Cold Damage : 14-20 \n" +
-                        "Cold length : 18.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 85-93 \n" +
+                        "Freezes for 4.8 seconds \n" +
+                        "Mana cost : 10.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 11:
-                text = "Cold Damage : 16-23 \n" +
-                        "Cold length : 20 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 99-108 \n" +
+                        "Freezes for 5 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 12:
-                text = "Cold Damage : 18-25 \n" +
-                        "Cold length : 21.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 113-122 \n" +
+                        "Freezes for 5.2 seconds \n" +
+                        "Mana cost : 11.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 13:
-                text = "Cold Damage : 20-28 \n" +
-                        "Cold length : 22.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 127-137 \n" +
+                        "Freezes for 5.4 seconds \n" +
+                        "Mana cost : 12 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 14:
-                text = "Cold Damage : 22-30 \n" +
-                        "Cold length : 24.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 141-151 \n" +
+                        "Freezes for 5.6 seconds \n" +
+                        "Mana cost : 12.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 15:
-                text = "Cold Damage : 24-33 \n" +
-                        "Cold length : 25.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 155-166 \n" +
+                        "Freezes for 5.8 seconds \n" +
+                        "Mana cost : 13 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 16:
-                text = "Cold Damage : 26-35 \n" +
-                        "Cold length : 27 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 169-180 \n" +
+                        "Freezes for 6 seconds \n" +
+                        "Mana cost : 13.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 17:
-                text = "Cold Damage : 29-39 \n" +
-                        "Cold length : 28.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 190-202 \n" +
+                        "Freezes for 6.2 seconds \n" +
+                        "Mana cost : 14 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 18:
-                text = "Cold Damage : 32-42 \n" +
-                        "Cold length : 29.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 211-223 \n" +
+                        "Freezes for 6.4 seconds \n" +
+                        "Mana cost : 14.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 19:
-                text = "Cold Damage : 35-46 \n" +
-                        "Cold length : 31.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 232-245 \n" +
+                        "Freezes for 6.6 seconds \n" +
+                        "Mana cost : 15 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
             case 20:
-                text = "Cold Damage : 38-49 \n" +
-                        "Cold length : 32.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 253-266 \n" +
+                        "Freezes for 6.8 seconds \n" +
+                        "Mana cost : 15.5 \n\n" +
+                        "Ice Blast receives bonuses from: \n\n" +
+                        "Ice Bolt: + 8% Cold damage per level \n\n" +
+                        "Glacial Spike: + 10% Cold damage per level \n\n" +
+                        "Blizzard: + 8% Cold damage per level \n\n" +
+                        "Frozen Orb: + 8% Cold damage per level \n\n";
                 break;
         }
         return text;
     }
+
     String FrostNovaValues(int level) {
         String text = null;
         switch (level) {
@@ -1035,228 +1017,169 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 2-4 \n" +
+                        "Cold length : 8 seconds \n" +
+                        "Mana cost : 9 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 2:
                 text = "Cold Damage : 4-6 \n" +
-                        "Cold length : 7.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                        "Cold length : 9 seconds \n" +
+                        "Mana cost : 10 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 3:
-                text = "Cold Damage : 5-8 \n" +
-                        "Cold length : 8.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 6-9 \n" +
+                        "Cold length : 10 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 4:
-                text = "Cold Damage : 6-9 \n" +
-                        "Cold length : 10.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 8-11 \n" +
+                        "Cold length : 11 seconds \n" +
+                        "Mana cost : 12 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 5:
-                text = "Cold Damage : 7-11 \n" +
-                        "Cold length : 11.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 10-14 \n" +
+                        "Cold length : 12 seconds \n" +
+                        "Mana cost : 13 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 6:
-                text = "Cold Damage : 8-12 \n" +
+                text = "Cold Damage : 12-16 \n" +
                         "Cold length : 13 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                        "Mana cost : 14 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 7:
-                text = "Cold Damage : 9-14 \n" +
-                        "Cold length : 14.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 14-19 \n" +
+                        "Cold length : 14 seconds \n" +
+                        "Mana cost : 15 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 8:
-                text = "Cold Damage : 10-15 \n" +
-                        "Cold length : 15.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 16-21 \n" +
+                        "Cold length : 15 seconds \n" +
+                        "Mana cost : 16 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 9:
-                text = "Cold Damage : 12-18 \n" +
-                        "Cold length : 17.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 19-25 \n" +
+                        "Cold length : 16 seconds \n" +
+                        "Mana cost : 17 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 10:
-                text = "Cold Damage : 14-20 \n" +
-                        "Cold length : 18.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 22-28 \n" +
+                        "Cold length : 17 seconds \n" +
+                        "Mana cost : 18 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 11:
-                text = "Cold Damage : 16-23 \n" +
-                        "Cold length : 20 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 25-32 \n" +
+                        "Cold length : 18 seconds \n" +
+                        "Mana cost : 19 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 12:
-                text = "Cold Damage : 18-25 \n" +
-                        "Cold length : 21.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 28-35 \n" +
+                        "Cold length : 19 seconds \n" +
+                        "Mana cost : 20 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 13:
-                text = "Cold Damage : 20-28 \n" +
-                        "Cold length : 22.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 31-39 \n" +
+                        "Cold length : 20 seconds \n" +
+                        "Mana cost : 21 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 14:
-                text = "Cold Damage : 22-30 \n" +
-                        "Cold length : 24.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 34-42 \n" +
+                        "Cold length : 21 seconds \n" +
+                        "Mana cost : 22 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 15:
-                text = "Cold Damage : 24-33 \n" +
-                        "Cold length : 25.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 37-46 \n" +
+                        "Cold length : 22 seconds \n" +
+                        "Mana cost : 23 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 16:
-                text = "Cold Damage : 26-35 \n" +
-                        "Cold length : 27 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 40-49 \n" +
+                        "Cold length : 23 seconds \n" +
+                        "Mana cost : 24 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 17:
-                text = "Cold Damage : 29-39 \n" +
-                        "Cold length : 28.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 44-54 \n" +
+                        "Cold length : 24 seconds \n" +
+                        "Mana cost : 25 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 18:
-                text = "Cold Damage : 32-42 \n" +
-                        "Cold length : 29.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 48-58 \n" +
+                        "Cold length : 25 seconds \n" +
+                        "Mana cost : 26 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 19:
-                text = "Cold Damage : 35-46 \n" +
-                        "Cold length : 31.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 52-63 \n" +
+                        "Cold length : 26 seconds \n" +
+                        "Mana cost : 27 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
             case 20:
-                text = "Cold Damage : 38-49 \n" +
-                        "Cold length : 32.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Cold Damage : 56-67 \n" +
+                        "Cold length : 27 seconds \n" +
+                        "Mana cost : 28 \n\n" +
+                        "Frost Nova receives bonuses from: \n\n" +
+                        "Blizzard: + 10% Cold damage per level \n\n" +
+                        "Frozen Orb: + 10% Cold damage per level \n\n";
                 break;
         }
         return text;
     }
+
     String FrozenArmorValues(int level) {
         String text = null;
         switch (level) {
@@ -1264,228 +1187,229 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 30 percent \n" +
+                        "Duration : 120 seconds \n" +
+                        "Freezes for 1.2 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 2:
-                text = "Cold Damage : 4-6 \n" +
-                        "Cold length : 7.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 35 percent \n" +
+                        "Duration : 132 seconds \n" +
+                        "Freezes for 1.3 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 3:
-                text = "Cold Damage : 5-8 \n" +
-                        "Cold length : 8.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 40 percent \n" +
+                        "Duration : 144 seconds \n" +
+                        "Freezes for 1.4 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 4:
-                text = "Cold Damage : 6-9 \n" +
-                        "Cold length : 10.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 45 percent \n" +
+                        "Duration : 156 seconds \n" +
+                        "Freezes for 1.5 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 5:
-                text = "Cold Damage : 7-11 \n" +
-                        "Cold length : 11.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 50 percent \n" +
+                        "Duration : 168 seconds \n" +
+                        "Freezes for 1.6 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 6:
-                text = "Cold Damage : 8-12 \n" +
-                        "Cold length : 13 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 55 percent \n" +
+                        "Duration : 180 seconds \n" +
+                        "Freezes for 1.8 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 7:
-                text = "Cold Damage : 9-14 \n" +
-                        "Cold length : 14.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 60 percent \n" +
+                        "Duration : 192 seconds \n" +
+                        "Freezes for 1.9 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 8:
-                text = "Cold Damage : 10-15 \n" +
-                        "Cold length : 15.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 65 percent \n" +
+                        "Duration : 204 seconds \n" +
+                        "Freezes for 2 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 9:
-                text = "Cold Damage : 12-18 \n" +
-                        "Cold length : 17.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 70 percent \n" +
+                        "Duration : 216 seconds \n" +
+                        "Freezes for 2.1 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 10:
-                text = "Cold Damage : 14-20 \n" +
-                        "Cold length : 18.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 75 percent \n" +
+                        "Duration : 228 seconds \n" +
+                        "Freezes for 2.2 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 11:
-                text = "Cold Damage : 16-23 \n" +
-                        "Cold length : 20 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 80 percent \n" +
+                        "Duration : 240 seconds \n" +
+                        "Freezes for 2.4 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 12:
-                text = "Cold Damage : 18-25 \n" +
-                        "Cold length : 21.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 85 percent \n" +
+                        "Duration : 252 seconds \n" +
+                        "Freezes for 2.5 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 13:
-                text = "Cold Damage : 20-28 \n" +
-                        "Cold length : 22.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 90 percent \n" +
+                        "Duration : 264 seconds \n" +
+                        "Freezes for 2.6 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 14:
-                text = "Cold Damage : 22-30 \n" +
-                        "Cold length : 24.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 95 percent \n" +
+                        "Duration : 276 seconds \n" +
+                        "Freezes for 2.7 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 15:
-                text = "Cold Damage : 24-33 \n" +
-                        "Cold length : 25.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 100 percent \n" +
+                        "Duration : 288 seconds \n" +
+                        "Freezes for 2.8 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 16:
-                text = "Cold Damage : 26-35 \n" +
-                        "Cold length : 27 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 105 percent \n" +
+                        "Duration : 300 seconds \n" +
+                        "Freezes for 3 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 17:
-                text = "Cold Damage : 29-39 \n" +
-                        "Cold length : 28.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 110 percent \n" +
+                        "Duration : 312 seconds \n" +
+                        "Freezes for 3.1 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 18:
-                text = "Cold Damage : 32-42 \n" +
-                        "Cold length : 29.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 115 percent \n" +
+                        "Duration : 324 seconds \n" +
+                        "Freezes for 3.2 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 19:
-                text = "Cold Damage : 35-46 \n" +
-                        "Cold length : 31.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 120 percent \n" +
+                        "Duration : 336 seconds \n" +
+                        "Freezes for 3.3 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 20:
-                text = "Cold Damage : 38-49 \n" +
-                        "Cold length : 32.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 125 percent \n" +
+                        "Duration : 348 seconds \n" +
+                        "Freezes for 3.4 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
         }
         return text;
     }
+
     String ShiverArmorValues(int level) {
         String text = null;
         switch (level) {
@@ -1493,228 +1417,249 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 320 seconds \n" +
+                        "Defense bonus : 45 percent \n" +
+                        "Cold damage : 16-22 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 2:
-                text = "Cold Damage : 4-6 \n" +
-                        "Cold length : 7.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 332 seconds \n" +
+                        "Defense bonus : 51 percent \n" +
+                        "Cold damage : 22-29 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 3:
-                text = "Cold Damage : 5-8 \n" +
-                        "Cold length : 8.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 344 seconds \n" +
+                        "Defense bonus : 57 percent \n" +
+                        "Cold damage : 28-36 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 4:
-                text = "Cold Damage : 6-9 \n" +
-                        "Cold length : 10.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 356 seconds \n" +
+                        "Defense bonus : 63 percent \n" +
+                        "Cold damage : 33-43 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 5:
-                text = "Cold Damage : 7-11 \n" +
-                        "Cold length : 11.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 368 seconds \n" +
+                        "Defense bonus : 69 percent \n" +
+                        "Cold damage : 39-50 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 6:
-                text = "Cold Damage : 8-12 \n" +
-                        "Cold length : 13 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 380 seconds \n" +
+                        "Defense bonus : 75 percent \n" +
+                        "Cold damage : 44-57 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 7:
-                text = "Cold Damage : 9-14 \n" +
-                        "Cold length : 14.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 392 seconds \n" +
+                        "Defense bonus : 81 percent \n" +
+                        "Cold damage : 50-56 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 8:
-                text = "Cold Damage : 10-15 \n" +
-                        "Cold length : 15.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 404 seconds \n" +
+                        "Defense bonus : 87 percent \n" +
+                        "Cold damage : 56-71 \n" +
+                        "Cold length : 4 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 9:
-                text = "Cold Damage : 12-18 \n" +
-                        "Cold length : 17.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 416 seconds \n" +
+                        "Defense bonus : 45 percent \n" +
+                        "Cold damage : 64-81 \n" +
+                        "Cold length : 5 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 10:
-                text = "Cold Damage : 14-20 \n" +
-                        "Cold length : 18.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 428 seconds \n" +
+                        "Defense bonus : 99 percent \n" +
+                        "Cold damage : 72-91 \n" +
+                        "Cold length : 6 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 11:
-                text = "Cold Damage : 16-23 \n" +
-                        "Cold length : 20 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 440 seconds \n" +
+                        "Defense bonus : 105 percent \n" +
+                        "Cold damage : 81-100 \n" +
+                        "Cold length : 7 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 12:
-                text = "Cold Damage : 18-25 \n" +
-                        "Cold length : 21.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 452 seconds \n" +
+                        "Defense bonus : 111 percent \n" +
+                        "Cold damage : 89-110 \n" +
+                        "Cold length : 8 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 13:
-                text = "Cold Damage : 20-28 \n" +
-                        "Cold length : 22.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 464 seconds \n" +
+                        "Defense bonus : 117 percent \n" +
+                        "Cold damage : 98-120 \n" +
+                        "Cold length : 9 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 14:
-                text = "Cold Damage : 22-30 \n" +
-                        "Cold length : 24.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 476 seconds \n" +
+                        "Defense bonus : 123 percent \n" +
+                        "Cold damage : 106-130 \n" +
+                        "Cold length : 10 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 15:
-                text = "Cold Damage : 24-33 \n" +
-                        "Cold length : 25.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 488 seconds \n" +
+                        "Defense bonus : 129 percent \n" +
+                        "Cold damage : 114-140 \n" +
+                        "Cold length : 11 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 16:
-                text = "Cold Damage : 26-35 \n" +
-                        "Cold length : 27 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 500 seconds \n" +
+                        "Defense bonus : 135 percent \n" +
+                        "Cold damage : 123-149 \n" +
+                        "Cold length : 12 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 17:
-                text = "Cold Damage : 29-39 \n" +
-                        "Cold length : 28.4 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 512 seconds \n" +
+                        "Defense bonus : 141 percent \n" +
+                        "Cold damage : 134-162 \n" +
+                        "Cold length : 14 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 18:
-                text = "Cold Damage : 32-42 \n" +
-                        "Cold length : 29.8 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 524 seconds \n" +
+                        "Defense bonus : 147 percent \n" +
+                        "Cold damage : 147-175 \n" +
+                        "Cold length : 16 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 19:
-                text = "Cold Damage : 35-46 \n" +
-                        "Cold length : 31.2 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 536 seconds \n" +
+                        "Defense bonus : 153 percent \n" +
+                        "Cold damage : 156-187 \n" +
+                        "Cold length : 18 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
             case 20:
-                text = "Cold Damage : 38-49 \n" +
-                        "Cold length : 32.6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Duration : 548 seconds \n" +
+                        "Defense bonus : 159 percent \n" +
+                        "Cold damage : 168-200 \n" +
+                        "Cold length : 20 seconds \n" +
+                        "Mana cost : 11 \n\n" +
+                        "Shiver Armor receives bonuses from: \n\n" +
+                        "Frozen Armor: + 10 seconds per level \n\n" +
+                        "Frozen Armor: + 9% Cold damage per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 9% Cold damage per level \n\n";
                 break;
         }
         return text;
     }
+
     String ChillingArmorValues(int level) {
         String text = null;
         switch (level) {
@@ -1722,15 +1667,15 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
-                        "Ice Bolt receives bonuses from: \n\n" +
-                        "Frost Nova: + 15% Cold damage per level \n\n" +
-                        "Ice Blast: + 15% Cold damage per level \n\n" +
-                        "Glacial Spike: + 15% Cold damage per level \n\n" +
-                        "Blizzard: + 15% Cold damage per level \n\n" +
-                        "Frozen Orb: + 15% Cold damage per level \n\n";
+                text = "Defense Bonus : 30 percent \n" +
+                        "Duration : 120 seconds \n" +
+                        "Freezes for 1.2 seconds \n" +
+                        "Mana cost : 7 \n\n" +
+                        "Frozen Armor receives bonuses from: \n\n" +
+                        "Shiver Armor: + 10 seconds per level \n\n" +
+                        "Shiver Armor: + 5% Freeze length per level \n\n" +
+                        "Chilling Armor: + 10 seconds per level \n\n" +
+                        "Chilling Armor: + 5% Freeze length per level \n\n";
                 break;
             case 2:
                 text = "Cold Damage : 4-6 \n" +
@@ -1944,6 +1889,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
         }
         return text;
     }
+
     String GlacialSpikeValues(int level) {
         String text = null;
         switch (level) {
@@ -2173,6 +2119,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
         }
         return text;
     }
+
     String BlizzardValues(int level) {
         String text = null;
         switch (level) {
@@ -2402,6 +2349,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
         }
         return text;
     }
+
     String FrozenOrbValues(int level) {
         String text = null;
         switch (level) {
@@ -2631,6 +2579,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
         }
         return text;
     }
+
     String ColdMasteryValues(int level) {
         String text = null;
         switch (level) {
