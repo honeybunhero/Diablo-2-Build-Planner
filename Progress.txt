@@ -53,3 +53,8 @@ steps are repeated across the other two skills, and then the rest of the charact
 	The Sorceress Cold tree is now able to remove skill points added by longclicking. A description text will appear when the user adds or removes skill points in order to show what
 changes will happen with that skill. This will work with all Cold skills, but full implementation has only been completed with Ice Bolt. The rest of the Cold skills have all of Ice Bolt's
 text, so that will be changed to their appropriate values.
+
+8/23/2021
+	As I continued filling out the descriptions for all the other Cold skills I realized that I need to show the increased stats when you level up the skills's related buff skills. Instead of having it all
+under the same Sorceress class I created a new class that will be used to calculate each of her skills separately, and then get called when needed. It took some time to work out the calculations
+needed for the first skill, but, for some reason, every other level the max damage number on the Ice Blast skill will be 1 or 2 points off the correct answer. Need to figure out why that is.

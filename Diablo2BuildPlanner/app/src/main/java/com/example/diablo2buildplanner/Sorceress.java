@@ -27,6 +27,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
 
     int totalSkillPoints;
 
+    ColdSkillsCalculations coldSkillsCalc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +111,7 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
     }
 
     void Initialize() {
+        coldSkillsCalc = new ColdSkillsCalculations();
         rlSkillTree.setBackgroundResource(R.drawable.sorceress_ice);
         ShowColdSkills();
         HideLightningSkills();
@@ -577,9 +580,10 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                 text = "";
                 break;
             case 1:
-                text = "Cold Damage : 3-5 \n" +
-                        "Cold length : 6 seconds \n" +
-                        "Mana cost : 3 \n\n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(3, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(5, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
+                        "Cold length : 7.4 seconds \n" +
+                        "Mana cost : 3 seconds \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
                         "Frost Nova: + 15% Cold damage per level \n\n" +
                         "Ice Blast: + 15% Cold damage per level \n\n" +
@@ -588,7 +592,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 2:
-                text = "Cold Damage : 4-6 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(4, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(6, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 7.4 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -599,7 +604,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 3:
-                text = "Cold Damage : 5-8 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(5, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(8, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 8.8 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -610,7 +616,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 4:
-                text = "Cold Damage : 6-9 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(6, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(9, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 10.2 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -621,7 +628,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 5:
-                text = "Cold Damage : 7-11 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(7, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(11, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 11.6 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -632,7 +640,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 6:
-                text = "Cold Damage : 8-12 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(8, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(12, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 13 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -643,7 +652,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 7:
-                text = "Cold Damage : 9-14 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(9, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(14, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 14.4 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -654,7 +664,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 8:
-                text = "Cold Damage : 10-15 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(10, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(15, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 15.8 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -665,7 +676,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 9:
-                text = "Cold Damage : 12-18 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(12, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(18, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 17.2 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -676,7 +688,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 10:
-                text = "Cold Damage : 14-20 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(14, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(20, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 18.6 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -687,7 +700,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 11:
-                text = "Cold Damage : 16-23 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(16, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(23, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 20 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -698,7 +712,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 12:
-                text = "Cold Damage : 18-25 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(18, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(25, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 21.4 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -709,7 +724,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 13:
-                text = "Cold Damage : 20-28 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(20, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(28, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 22.8 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -720,7 +736,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 14:
-                text = "Cold Damage : 22-30 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(22, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(30, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 24.2 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -731,7 +748,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 15:
-                text = "Cold Damage : 24-33 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(24, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(33, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 25.6 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -742,7 +760,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 16:
-                text = "Cold Damage : 26-35 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(26, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(35, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 27 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -753,7 +772,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 17:
-                text = "Cold Damage : 29-39 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(29, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(39, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 28.4 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -764,7 +784,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 18:
-                text = "Cold Damage : 32-42 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(32, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(42, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 29.8 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -775,7 +796,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 19:
-                text = "Cold Damage : 35-46 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(35, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(46, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 31.2 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
@@ -786,7 +808,8 @@ public class Sorceress extends AppCompatActivity implements classButtons.ClassBu
                         "Frozen Orb: + 15% Cold damage per level \n\n";
                 break;
             case 20:
-                text = "Cold Damage : 38-49 \n" +
+                text = "Cold Damage : " + coldSkillsCalc.IceBoltMin(38, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) +
+                        "-" + coldSkillsCalc.IceBoltMax(49, frostNovaPoints, iceBlastPoints, glacialSpikePoints, blizzardPoints, frozenOrbPoints) + "\n" +
                         "Cold length : 32.6 seconds \n" +
                         "Mana cost : 3 \n\n" +
                         "Ice Bolt receives bonuses from: \n\n" +
